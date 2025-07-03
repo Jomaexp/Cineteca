@@ -1,0 +1,1344 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html{
+	background: rgb(1, 15, 7);
+}
+body{
+	font-family: 'Roboto', sans-serif;
+	max-width: 900px;
+	min-height: 100vh;
+	margin: 0 auto;
+	display: flex;
+    flex-direction: column;
+	background: rgb(3, 30, 15);
+	color: white;
+	border-radius: 15px;
+}
+.nav{
+    background-color:  rgb(3, 45, 16);  
+	height: 80px;
+	color: white;
+	border-radius: 15px;
+}
+
+.nav_logo{
+	font-size: 1.5em;
+	font-weight: 900;
+}
+
+.nav_contenedor{
+	display: flex;
+	height: 100%;
+	width: 90%;
+	margin: 0 auto;
+	justify-content: space-between;
+	align-items: center;
+
+}
+.logo_nombre{
+	display: flex;
+	align-items: center;
+	justify-content: left;
+}
+
+.nav_label, .nav_input{
+	display: none;
+}
+
+.nav_menu{
+	display: flex;
+	flex-direction: row;
+	gap: 3em;
+}
+/* Este id se usa en la cabecera cuando php detecta que es la URI donde se encuentra */
+#nav_enlace_activo{
+	background-color:  rgb(3, 30, 15);
+}
+.nav_enlace{
+	color: white;
+	font-size: 1.1em;
+	text-decoration: none;
+	padding: 7px 13px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.nav_menu a::after, .nav_menu a:hover{
+    background-color:  rgb(3, 30, 15);
+    transition: .5s;
+}
+
+.nav_usuario span{
+	background-color:  rgba(8, 130, 30, 0.444);
+	border-radius: 5px;
+	padding: 7px 13px;
+
+}
+
+ /* PIE DE PAGINA */
+ footer{
+    background-color:  rgb(3, 45, 16);  
+	text-align: center;
+    margin-top: auto;
+    width: 100%;
+	height: 70px;
+	border-radius: 15px;
+}
+.contenedor_footer{
+	display: flex;
+	height: 100%;
+	width: 90%;
+	margin: 0 auto;
+	justify-content: space-between;
+	align-items: center;
+}
+.derechos {
+    font-size: 1.1em;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+#redes{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+}
+#redes a{
+    padding-left: 10px;
+}
+/*PAGINA SOBRENOSOTROS*/
+#contenedor_sobrenosotros{
+	margin-top: 20px;
+	font-size: 1.2em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items:center;
+}
+.banner_sobrenosotros{
+	width: 800px;
+	position: relative;
+	border-radius: 15px;
+	border: 3px solid rgb(6, 71, 25);
+	box-shadow: 0px 13px 10px -7px black;
+	margin-bottom: 20px;
+	position: relative;
+	overflow: hidden; /* así la imagen no atraviesa los bordes redondos */
+	height: 500px;
+	border-radius: 15px;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+.banner_sobrenosotros  img {
+	width: 100%;
+	height: 100%;
+}
+.banner_sobrenosotros_cuerpo{
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	position:absolute; /*conseguimos que el cuerpo quede encima de la imagen*/
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align: center;
+	background:  rgba(3, 30, 15, 0.547);
+	backdrop-filter: blur(2px);
+	text-shadow: 3px 2px 2px black;
+}
+.sobrenosotros_tarjeta{
+	width: 800px;
+	position: relative;
+	border-radius: 15px;
+	border: 3px solid rgb(6, 71, 25);
+	box-shadow: 0px 13px 10px -7px black;
+	margin-bottom: 20px;
+	position: relative;
+	overflow: hidden; /* así la imagen no atraviesa los bordes redondos */
+	height: 90px;
+	border-radius: 15px;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+.sobrenosotros_tarjeta  img {
+	width: 100%;
+	height: 100%;
+}
+.sobrenosotros_tarjeta_cuerpo{
+	width: 100%;
+	height: 100%;
+	position:absolute; /*conseguimos que el cuerpo quede encima de la imagen*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	background:  rgba(3, 30, 15, 0.547);
+	backdrop-filter: blur(3px);
+	text-shadow: 3px 2px 2px black;
+}
+
+/*PAGINA DE INICIO (PELICULA MAS VALORADA E INFO)*/
+#contenedor_inicio{
+	margin-top: 20px;
+	font-size: 1.1em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items:center;
+}
+.banner{
+	width: 800px;
+	position: relative;
+	border-radius: 15px;
+	border: 3px solid rgb(6, 71, 25);
+	box-shadow: 0px 13px 10px -7px black;
+	margin-bottom: 20px;
+	position: relative;
+	overflow: hidden;
+	height: 400px;
+	border-radius: 15px;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.banner  img {
+	width: 100%;
+	height: 450px;
+}
+
+.banner_cuerpo{
+	width: 100%;
+	height: 100%;
+	/* Escondemos el texto de la película desplazándola arriba y 
+	la hacemos invisible con overflow hidden*/
+	overflow: hidden;
+	top: -100%;
+	width: 100%;
+	padding: 20px;
+	position:absolute;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background:  rgba(3, 30, 15, 0.547);
+	backdrop-filter: blur(5px);
+	transition: 0.7s;
+}
+.banner:hover .banner_cuerpo{
+	top: 0;
+}
+.banner_cabeza{
+	top: 10px;
+	text-shadow: 3px 2px 2px black;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.banner_titulo{
+	text-transform: uppercase;
+	font-size: 1.3em;
+	font-weight: 900;
+	text-shadow: 3px 2px 2px black;
+	margin-bottom: 30px;
+}
+.banner_datos{
+	width: 25%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: left;
+	transition: 0.7s;
+
+}
+.banner_sinopsis{
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	text-shadow: 3px 2px 2px black;
+	transition: 0.7s;
+	font-size: 1.2em;
+}
+.banner_enlace{
+	width: 25%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+	transition: 0.7s;
+}
+.banner_anio{
+	text-transform: capitalize;
+	font-size: 1.1em;
+	font-weight: 400;
+	text-shadow: 3px 2px 2px black;
+	margin-bottom: 30px;
+
+}
+.banner_genero{
+	text-transform: capitalize;
+	font-size: 1.1em;
+	font-weight: 400;
+	text-shadow: 3px 2px 2px black;
+	margin-bottom: 30px;
+}
+.banner_nota{
+	text-transform: capitalize;
+	font-size: 1.2em;
+	font-weight: 700;
+	text-shadow: 3px 2px 2px black;
+	margin-bottom: 30px;
+}
+.banner_cuerpo a{
+	background-color: rgb(8, 40, 20);
+	padding: 10px;
+	border-radius: 8px;
+	margin-bottom: 5px;
+	border: 1px solid rgb(8, 100, 30);
+	font-size: 1.3em;
+	font-weight: bold;
+	color: white;
+	cursor: pointer;
+	margin-bottom: 30px;
+}
+.banner_cuerpo a:hover{
+	outline: 3px solid rgb(11, 142, 41);
+}
+.inicio_tarjetas{
+	width: 800px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 1em;
+	flex-direction: row;
+	align-items:center;
+	justify-content: space-evenly;
+}
+.inicio_tarjetas .inicio_tarjeta img {
+	width: 100%;
+}
+.inicio_tarjetas .inicio_tarjeta{
+	width: 200px;
+	height: 150px;
+	position: relative;
+	border-radius: 12px;
+	overflow: hidden;
+	border: 3px solid rgb(6, 71, 25);
+	box-shadow: 0px 13px 10px -7px black;
+	margin-bottom: 20px;
+}
+
+.inicio_tarjeta_cuerpo{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: -100%;
+	position: absolute;
+	background:  rgba(3, 30, 15, 0.444);
+	backdrop-filter: blur(5px);
+	padding:10px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+	transition: 0.7s;
+}
+.inicio_tarjetas .inicio_tarjeta:hover .inicio_tarjeta_cuerpo{
+	right: 0;
+	
+}
+
+/* PAGINA PELICULAS LISTADO */
+
+#contenedor_peliculas{
+	font-size: 1.1em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items:stretch;
+}
+#cabezapeliculas{
+    display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content:space-evenly;
+	align-items:stretch;
+    padding-top: 20px;
+	padding-bottom: 10px;
+    background-color:  rgb(3, 30, 15);
+}
+
+#formupeliculas{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content:space-evenly;
+	align-items: stretch;
+    padding-top: 20px;
+	padding-bottom: 20px;
+    background-color:  rgb(3, 30, 15);
+	margin: 0.5em;
+}
+
+fieldset{
+    border: none;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items:center;
+    background-color:  rgb(3, 30, 15);
+}
+
+.infopelicula{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 1em;
+	flex-direction: row;
+	align-items:center;
+	justify-content: space-evenly;
+}
+.infopelicula .tarjeta img {
+	width: 100%;
+}
+.infopelicula .tarjeta{
+	width: 200px;
+	height: 240px;
+	position: relative;
+	border-radius: 12px;
+	overflow: hidden;
+	border: 3px solid rgb(6, 71, 25);
+	box-shadow: 0px 13px 10px -7px black;
+	margin-bottom: 20px;
+}
+
+.tarjeta_cuerpo{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: -100%;
+	position: absolute;
+	background:  rgba(3, 30, 15, 0.444);
+	backdrop-filter: blur(5px);
+	padding: 20px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+	transition: 0.7s;
+}
+
+.tarjeta_titulo{
+	text-transform: uppercase;
+	font-size: 1.3em;
+	font-weight: 900;
+	text-shadow: 3px 2px 2px black;
+}
+.tarjeta_anio{
+	text-transform: capitalize;
+	font-size: 1.1em;
+	font-weight: 400;
+	text-shadow: 3px 2px 2px black;
+}
+.tarjeta_genero{
+	text-transform: capitalize;
+	font-size: 1.1em;
+	font-weight: 400;
+	text-shadow: 3px 2px 2px black;
+}
+.tarjeta_nota{
+	text-transform: capitalize;
+	font-size: 1.2em;
+	font-weight: 700;
+	text-shadow: 3px 2px 2px black;
+}
+.tarjeta_cuerpo a{
+	background-color: rgb(8, 40, 20);
+	padding: 5px;
+	border-radius: 8px;
+	margin-bottom: 5px;
+	border: 1px solid rgb(8, 100, 30);
+	font-size: 1em;
+	font-weight: bold;
+	color: white;
+	cursor: pointer;
+}
+.infopelicula .tarjeta:hover .tarjeta_cuerpo{
+	right: 0;
+}
+
+.infopelicula table th {
+    border: 3px solid rgb(8, 85, 30);
+    border-radius: 10px;
+    background-color: rgb(8, 85, 30);
+}
+
+
+.entrada{
+    background-color: rgb(8, 40, 20);
+	padding: 5px;
+	border-radius: 8px;
+	margin-bottom: 5px;
+	border: 1px solid rgb(8, 100, 30);
+	font-size: 1em;
+	font-weight: bold;
+	color: white;
+	text-align:center;
+}
+.entrada:hover{
+	border: 1px solid rgb(8, 130, 30);
+}
+.entrada:focus{
+	outline: 2px solid rgb(8, 130, 30);
+}
+.boton{
+	background-color: rgb(8, 85, 30);
+	border: none;
+	padding: 5px;
+	border-radius: 8px;
+	margin-bottom: 5px;
+	border: 1px solid rgb(8, 100, 30);
+	font-size: 1em;
+	font-weight: bold;
+	color: white;
+	text-align:center;
+	cursor: pointer;
+}
+.boton:hover{
+	border: 1px solid rgb(8, 130, 30);
+}
+
+#titulo{
+    text-align: center;
+	width: 100px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+#pelis a:hover{
+    text-shadow: 1px 1px 2px white;
+}
+#infopelicula #pelis{
+    font-size: 1em;
+}
+
+/* PAGINA PELICULA DETALLE */
+#contenedor_pelicula{
+    font-size: 1.1em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items:stretch;
+}
+
+#fila1{
+    display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content:space-evenly;
+	align-items:stretch;
+    padding-top: 20px;
+	padding-bottom: 20px;
+    background-color:  rgb(3, 30, 15);
+}
+#izq{
+    display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	width: 450px;
+	align-items: stretch;
+}
+#posterdiv{
+    display: flex;
+	flex-direction: row;
+	justify-content: stretch;
+	align-items: center;
+}
+#posterdiv img{
+    border: 3px solid rgb(6, 71, 25);
+    border-radius: 10px;
+}
+#titulodiv{
+	display: flex;
+	flex-direction: column;
+	justify-content: stretch;
+	align-items: center;
+   
+}
+#titul{
+    text-shadow: -2px -2px 5px rgb(8, 85, 30);
+    text-align: center;
+}
+#titul td{
+    font-size: 2em;
+}
+/* Añado padding a los hijos para que se separen entre si.
+Separando el título de la película de la nota.
+Necesito comprobar por qué me lo hace en los dos aunque ponga 1.*/
+#titul tr td:nth-child(1){
+	padding-top: 40px;
+}
+#dcha{
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 450px;
+	align-items: center;
+}
+#detalles{
+   width: 80%;
+}
+#detalles table{
+    width: 100%;
+    text-align: center;
+}
+#detalles table th {
+    border: 3px solid rgb(6, 71, 25);
+    border-radius: 10px;
+    background-color:  rgb(3, 45, 16);   
+}
+#sinopsis{
+	display: flex;
+	flex-direction: row;
+	justify-content:space-evenly;
+	align-items:stretch;
+	padding-bottom: 20px;
+    background-color:  rgb(3, 30, 15);
+
+}
+#sinopsis table{
+    width: 100%; 
+    text-align: left;
+}
+#sinopsis table td {
+    padding-bottom: 10px;
+}
+#sinopsis table th {
+    text-align: center;
+	border-radius: 15px;
+    background-color:  rgb(3, 45, 16);   
+}
+#fila2{ 
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content:space-evenly;
+	align-items:stretch;
+    background-color:  rgb(3, 45, 16);  
+	border-radius: 15px;
+    align-items: center;
+
+}
+#izq2{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 450px;
+	align-items: center;
+    
+}
+#dcha2{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	width: 450px;
+	align-items: center;
+}
+
+#plataformas{
+    font-size: 1.2em;
+    text-align: center;
+    background-color:  rgb(3, 45, 16);   
+}
+#plataformas table{ 
+    text-align: center;
+    width:100%;
+    padding-top: 5%;
+}
+#platafromas table {
+    border: 3px solid rgb(8, 85, 30);
+    border-radius: 15px;
+}
+
+#trailerdiv{
+    font-size: 1.2em;
+    width: 100%;
+    text-align: center;
+}
+
+#trailer{
+    width: 100%;
+}
+
+#trailer iframe{
+	border-radius: 15px;
+}
+
+#criticas{
+    width: 100%;
+    font-size: 1em;
+}
+
+#criticas table{
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+#criticas tr:nth-child(odd){
+    background-color:  rgb(3, 45, 16);
+    border-radius: 15px;
+    border: 3px solid rgb(6, 71, 25);
+}
+
+#criticas table th {
+    border: 3px solid rgb(6, 71, 25);
+    border-radius: 10px;
+    background-color:  rgb(3, 45, 16); 
+    margin-bottom: 10px;  
+}
+#criticas  tr {
+    padding-bottom: 20px;  
+}
+#criticas td{
+	padding-bottom: 20px;
+	border-radius: 10px;
+}
+#nuevacritica{
+    font-size: 1.2em;
+    margin-top: 35px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#nuevacritica form{
+    margin-top: 15px;
+}
+#nuevacritica textarea{
+	width: 75%;
+    background-color:  rgb(3, 45, 16);
+    color: white;
+}
+#nuevacritica form .boton{
+	
+	background-color: rgb(6, 56, 20);
+	border: none;
+	padding: 10px;
+	color: white;
+	margin: 16px 0px;
+	font-size: 1em;
+	border-radius: 8px;
+	margin-bottom: 16px;
+	cursor: pointer;
+}
+#nuevacritica form .boton:hover{
+	outline: 3px solid rgb(4, 82, 19);
+}
+
+#nuevacritica form .entrada{
+	
+	background-color: rgb(8, 40, 20);
+	padding: 10px;
+	border-radius: 8px;
+	margin-bottom: 16px;
+	border: 3px solid rgb(4, 82, 19);
+	font-size: 18px;
+	font-weight: bold;
+	color: gray;
+	text-align:center;
+}
+#nuevacritica form #nota{
+	width: 20%;
+	background-color: rgb(8, 40, 20);
+	padding: 10px;
+	border-radius: 8px;
+	margin-bottom: 16px;
+	font-size: 18px;
+	font-weight: bold;
+	color: gray;
+	text-align:center;
+}
+
+/* PAGINA LOGIN */
+
+/* parte del login y registro*/
+#login{
+	width: 350px;
+	background-color:  rgb(3, 45, 16);
+	padding: 20px;
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	border-radius: 8px;
+	box-shadow: 7px 13px 37px #000;
+    text-align: center;
+}
+#login input.boton{
+	width: 85%;
+	background-color: rgb(8, 85, 30);
+	border: none;
+	padding: 12px;
+	color: white;
+	font-weight: bold;
+	margin: 16px 0px;
+	font-size: 1.3em;
+	border-radius: 8px;
+	margin-bottom: 16px;
+	cursor: pointer;
+}
+#login input.boton:hover{
+	outline: 3px solid rgb(8, 130, 30);
+}
+
+#login .entrada{
+	width: 85%;
+	background-color: rgb(8, 40, 20);
+	padding: 5px;
+	border-radius: 8px;
+	margin-bottom: 16px;
+    margin-top: 16px;
+	border: 1px solid rgb(8, 100, 30);
+	font-size: 1.1em;
+	font-weight: bold;
+	color: gray;
+	text-align:center;
+}
+.entrada:hover{
+	border: 1px solid rgb(8, 130, 30);
+}
+.entrada:focus{
+	outline: 2px solid rgb(8, 130, 30);
+}
+#cabezalogin{
+	font-weight: bold;
+	padding-bottom: 18px;
+	width: 100%;
+	text-align: center;
+	font-size: 1.3em;
+	color: white;
+}
+#login #msg{
+    font-size: 18px;
+	font-weight: bold;
+}
+#login .avisologin{
+    font-size: 18px;
+	font-weight: bold;
+}
+
+/* PAGINA ADMIN */
+#nuevapelicula #msg{
+    font-size: 1.5em;
+	font-weight: bold;
+	padding-bottom: 9px;
+}
+#nuevapelicula{
+	width: 700px;
+	background-color:  rgb(3, 45, 16);
+	padding: 20px;
+	margin: auto;
+	margin-top: 50px;
+	border-radius: 8px;
+	box-shadow: 7px 13px 37px #000;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+
+#izqpeli{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+
+}
+#dchapeli{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+}
+
+
+#nuevapelicula .formu .boton{
+	width: 100%;
+	background-color: rgb(8, 85, 30);
+	border: none;
+	padding: 12px;
+	color: white;
+	font-weight: bold;
+	margin: 16px 0px;
+	font-size: 1.3em;
+	border-radius: 8px;
+	margin-bottom: 16px;
+	cursor: pointer;
+}
+#nuevapelicula .formu .boton:hover{
+	outline: 3px solid rgb(8, 130, 30);
+}
+#nuevapelicula .formu .boton2{
+	width: 30%;
+	background-color: rgb(8, 85, 30);
+	border: none;
+	padding: 10px 5px;
+	color: white;
+	font-weight: bold;
+	margin: 16px 0px;
+	font-size: 1.2em;
+	border-radius: 8px;
+	margin-bottom: 16px;
+	cursor: pointer;
+}
+#nuevapelicula .formu .boton2:hover{
+	outline: 3px solid rgb(8, 130, 30);
+}
+#nuevapelicula .entrada{
+	width: 100%;
+	background-color: rgb(8, 40, 20);
+	padding: 5px;
+	border-radius: 8px;
+	margin-bottom: 16px;
+	border: 1px solid rgb(8, 100, 30);
+	font-size: 1.1em;
+	font-weight: bold;
+	color: gray;
+	text-align:center;
+}
+#nuevapelicula .entrada:hover{
+	border: 1px solid rgb(8, 130, 30);
+}
+#nuevapelicula .entrada:focus{
+	outline: 2px solid rgb(8, 130, 30);
+}
+#nuevapelicula .opcion{
+	width: 50%;
+	background-color: #24303c;
+	padding: 5px;
+	border-radius: 8px;
+	margin-bottom: 16px;
+	border: 1px solid rgb(8, 100, 30);
+	font-size: 1.3em;
+	color: white;
+	width:35%;
+	background-color: rgb(8, 40, 20);
+	text-align: center;
+}
+
+#nuevapelicula .hor{
+	background-color: rgb(8, 40, 20);
+	padding: 10px;
+	border-radius: 8px;
+	margin-bottom: 16px;
+	font-size: 1.3em;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	margin-left: 60px;
+}
+
+#nuevapelicula .opcion:focus{
+		outline: 2px solid rgb(8, 130, 30);
+}
+
+#posterdivadmin{
+    display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+#posterdivadmin img{
+    border: 3px solid rgb(6, 71, 25);
+    border-radius: 10px;
+}
+#nuevapelicula .selectorpeli{
+	width: 100%;
+	background-color: rgb(8, 40, 20);
+	padding: 5px;
+	border-radius: 8px;
+	margin-bottom: 16px;
+	border: 1px solid rgb(8, 100, 30);
+	font-size: 1.1em;
+	font-weight: bold;
+	color: gray;
+	text-align:center;
+	resize:none;
+}
+
+#nuevapelicula #cabezaadmin{
+	font-weight: bold;
+	padding-bottom: 9px;
+	width: 100%;
+	text-align: center;
+	font-size: 1.4em;
+	color: white;
+}
+#nuevapelicula #plataformasadmin label{
+	margin-left: 30px;
+}
+#nuevapelicula .entradacheck{
+	margin-right: 30px;
+}
+.plataformastitul{
+	text-align: center;
+	margin-bottom: 20px;
+}
+#plataformasadmin{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+/* MENSAJES DE ALERTA PERSONALIZADOS */
+.swal2-container.swal2-center>.swal2-popup{
+	background-color: #031E0F  !important;
+  }
+  .swal2-html-container, .swal2-title{
+	color: white !important;
+  }
+  .swal2-styled.swal2-confirm{
+	background-color: #004000 !important;
+  }
+  .swal2-styled.swal2-confirm:focus{
+	box-shadow:0 0 0 3px #08641E  !important;
+  }
+  .swal2-icon.swal2-error {
+    border-color: #950101  !important;
+}
+.swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+	background-color: #950101 !important;
+}
+.swal2-popup {
+	border-radius: 15px !important;
+}
+.swal2-footer {
+    border-top: none !important;
+}
+
+/* media query para tamaños menores de 700px */
+@media (max-width: 700px){
+	/* MENU DE NAVEGACION */
+	.nav_label{
+		display:block;
+		cursor: pointer;
+	}
+	.nav_menu{
+		position: fixed;
+		top: 80px;
+		bottom: 0;
+		background: rgb(0, 64, 0);
+		width: 100%;
+		left: 0;
+		display: flex;
+		justify-content: space-evenly;
+		flex-direction: column;
+		align-items: center;
+		clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+		transition: clip-path 0.7s ease-in-out;
+		z-index: 10;
+	}
+	.nav_input:checked + .nav_menu{
+		/* efecto para hacer que aparezca desde la derecha el menú de navegación en móvil*/
+		clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+	}
+	.nav_enlaces{
+		display: flex;
+		justify-content: space-evenly;
+		flex-direction: column;
+		align-items: center;
+	}
+	.nav_enlaces .nav_enlace{
+		margin-bottom: 50px;
+	}
+	/* RESET DE BODY */
+		body{
+		width: 100% !important;
+		min-height: 100vh;
+		margin: 0 auto;
+	}
+
+	/* PIE DE PAGINA */
+	.contenedor_footer{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		height: 100%;
+		width: 90%;
+		margin: 0 auto;
+		justify-content: space-evenly;
+		
+	}
+	.derechos {
+		font-size: 1.1em;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+	#redes img{
+		height: 25px;
+	}
+	#redes a{
+		padding-left: 10px;
+	}
+	#redes{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	/* PAGINA DETALLES PELICULA */
+	#dcha{
+		padding-top: 20px;
+	}
+
+	#izq2{
+		padding-bottom: 20px;
+		
+	}
+	
+	#plataformas img{
+		width: 55px;
+		height: 55px;
+	}
+
+	/* LISTADO DE PELICULAS */
+	#formupeliculas{
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content:center;
+		align-items: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		background-color:  rgb(3, 30, 15);
+	}
+	#formulario .entrada{
+		width: 100%;
+	}
+	#formulario label{
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	#formulario .boton{
+		width: 100%;
+	}
+	fieldset{
+		border: none;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content:space-between;
+		align-items:center;
+		background-color:  rgb(3, 30, 15);
+	}
+
+	.infopelicula{
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		align-items:center;
+		justify-content: center;
+	}
+	
+	/* PAGINA ADMIN*/
+
+	#contenido_admin{
+		display: block !important;
+		margin: auto !important;
+		position: static !important;
+		float: none !important;
+	}
+
+	#nuevapelicula{
+		width: 350px;
+		display: block !important;
+		position: static !important;
+		float: none !important;
+	}
+
+	#nuevapelicula .entradacheck{
+		margin-right: 30px;
+	}
+	#nuevapelicula .formu{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: stretch;
+		justify-content: space-around;
+	}
+	#nuevapelicula .formu .boton2{
+		width: 100%;
+		background-color: rgb(8, 85, 30);
+		border: none;
+		padding: 12px;
+		color: white;
+		font-weight: bold;
+		margin: 16px 0px;
+		font-size: 1.3em;
+		border-radius: 8px;
+		margin-bottom: 16px;
+		cursor: pointer;
+	}
+	#nuevapelicula .formu .boton2:hover{
+		outline: 3px solid rgb(8, 130, 30);
+	}
+	
+	/* PAGINA INICIO */
+	#contenedor_inicio{
+		margin-top: 30px;
+	}
+	.banner{
+		width: 300px;
+		position: relative;
+		border-radius: 15px;
+		border: 3px solid rgb(6, 71, 25);
+		box-shadow: 0px 13px 10px -7px black;
+		margin-bottom: 30px;
+		margin-top: 30px;
+		position: relative;
+		overflow: hidden;
+		height: 300px;
+		border-radius: 15px;
+		text-align: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		height: fit-content;
+	}
+	.banner_cuerpo{
+		font-size: 0.9em;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		top: -100%;
+		width: 100%;
+		padding: 5px;
+		position:absolute;
+		text-align: center;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		background:  rgba(3, 30, 15, 0.547);
+		backdrop-filter: blur(5px);
+		transition: 0.7s;
+	}
+	.banner_cabeza{
+		margin-bottom: 5px;
+	}
+	.banner_datos{
+		font-size: 1.3em;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		transition: 0.7s;
+		padding-right: 0px;
+	}
+	.banner_sinopsis{
+		width:100%;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-shadow: 3px 2px 2px black;
+		transition: 0.7s;
+	}
+	.banner_enlace{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-end;
+		transition: 0.7s;
+	}
+	.banner_titulo{
+		margin-bottom: 0px;
+	}
+	.banner_anio{
+		display: none;
+	}
+	.banner_genero{
+		display: none;
+	}
+	.banner_nota{
+		display: none;
+	}
+	.banner_cuerpo a{
+		background-color: rgb(8, 40, 20);
+		padding: 5px;
+		border-radius: 8px;
+		border: 1px solid rgb(8, 100, 30);
+		font-size: 1.5em;
+		font-weight: bold;
+		color: white;
+		cursor: pointer;
+		margin-bottom: 0px;
+	}
+	.inicio_tarjetas{
+		width: 300px;
+		display: flex;
+		flex-wrap: wrap;
+		margin: 1em;
+		flex-direction: row;
+		align-items:center;
+		justify-content: space-evenly;
+	}
+	.inicio_tarjetas .inicio_tarjeta{
+		width: 400px;
+		height: 230px;
+		font-size: 1.3em;
+	}
+	/* PAGINA SOBRENOSOTROS */
+	.banner_sobrenosotros{
+		width: 300px;
+
+		font-size: 0.9em;
+		height: 1000px;
+	}
+	.sobrenosotros_tarjeta{
+		width: 300px;
+		position: relative;
+		border-radius: 15px;
+		border: 3px solid rgb(6, 71, 25);
+		box-shadow: 0px 13px 10px -7px black;
+		margin-bottom: 20px;
+		position: relative;
+		overflow: hidden; /* así la imagen no atraviesa los bordes redondos */
+		height: 90px;
+		border-radius: 15px;
+		text-align: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+}
